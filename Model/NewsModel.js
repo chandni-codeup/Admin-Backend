@@ -1,6 +1,5 @@
 const mongoose= require('mongoose')
 
-
 const newsSchema = new mongoose.Schema({
     title:{
         type:String
@@ -20,10 +19,8 @@ const newsSchema = new mongoose.Schema({
     },
 
 }, 
-
 {
   timestamps: true
 });
 
-//Export the model
 module.exports = mongoose.model('News', newsSchema);

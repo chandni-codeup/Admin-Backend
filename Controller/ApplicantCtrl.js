@@ -5,17 +5,12 @@ const Applicant = require('../Model/ApplicantsModel');
 const newApplicant=async (req, res) => {
   try {
     const { name, email, profilePhoto } = req.body;
-
-  
     const newApplicant = new Applicant({
       name,
       email,
       profilePhoto, 
     });
-
-   
     await newApplicant.save();
-
     res.status(201).json({
       message: 'Applicant created successfully',
       applicant: newApplicant,
