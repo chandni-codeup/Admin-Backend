@@ -29,7 +29,7 @@ app.use('/api',noticeRoute)
 app.use("/auth", authRoute);
 app.use("/api", applicantRoute);
 
-app.listen(PORT, '0.0.0.0', ()=>{
+app.listen(PORT,  ()=>{
     console.log(`Server is running on ${PORT} `);
     
 })
